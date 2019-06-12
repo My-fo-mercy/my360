@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Keywords" content="360会员商城，智能硬件，免费试用，智能家居，智能手表，智能家电">
+    <meta name="Description" content="360会员商城是360公司旗下一家会员制的智能硬件销售平台。">
+    <title>360会员商城</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./sass/base.min.css">
+    <link rel="stylesheet" href="./sass/index.min.css">
+    <link rel="stylesheet" href="./sass/details.min.css">
+    <script src="./script/thirdplugins/jquery.js"></script>
+    <script src="./script/js/360_reg_c.js"></script>
+    <script src="./script/js/cookie.js"></script>
+    <!--[if lt IE 9]>
+        <script src="https: //cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https: //cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="topbox" id="gotop">
+        <div class="container">
+            <ul class="clearfix">
+                <li class="topbox-item leftitem"><a data-monitor="public_top_help" target="_blank" href="/help">帮助中心</a></li>
+                <li class="topbox-item leftitem"><a data-monitor="public_top_collect" class="js-connect" href="javascript:;">收藏本站</a></li>
+                <li class="topbox-item rightitem codebtn">
+                    <a target="_blank" href="/download" class="telshop">手机360商城</a>
+                    <div class="codebox">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="codeimgbox">
+                                            <!-- 二维码图片 -->
+                                            <img src="./img/erweima.png">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+                <li class="topbox-item rightitem topNavMyOrder" style="margin-right: -10px; display: none;"><a href="/user/myorder" target="_blank">我的订单</a></li>
+                <li class="topbox-item rightitem navloginbox">
+
+                    <!-- 这就是个注释 -->
+                    <div class="welcome loginbefore nloginWrap">
+                        <span class="yidenglu" style="display: none;"><span id="lopho"></span><a href="#" id="loginout">退出</a></span>
+                        <span class="weidenglu"><a href="#" class="do_login" onclick="overlay()">登录</a>
+                        <a href="#" class="reg" onclick="overlay2()">注册</a></span>
+                    </div>
+                    <script>
+                        $(function() {
+                            $('#loginout').on('click', function() {
+                                $('.yidenglu').css('display', 'none');
+                                cookie.remove('phone');
+                                location.reload();
+                                $('.do_login').css('display', 'block');
+                                return false;
+                            })
+                            if (cookie.get('phone')) {
+                                $('.weidenglu').css('display', 'none');
+                                $('.yidenglu').css('display', 'block');
+                                $('#lopho').html(cookie.get('phone'));
+                            }
+                        })
+                    </script>
+                    <!-- 登录框 -->
+                    <div id="modal-overlay" style="visibility: hidden;">
+                        <div class="huibg"></div>
+                        <div class="modal-data">
+                            <div class="doclose clearfix"><a onclick="overlay()" href="">x</a></div>
+                            <div class="popup-cont">
+                                <div class="m-header f-cb m-header2" id="auto-id-1553908843328">
+                                    <div class="u-closebtn u-closebtn1" data-action="doclose"></div>
+                                    <div class="j-headimg clearfix">
+                                        <div data-action="goEmailLogin" class="u-head1 active j-head" id="email-login">短信登录</div>
+                                        <div id="mobileModule" data-action="goMbLogin" class="u-head2 j-head">360帐号登录</div>
+                                    </div>
+                                    <form>
+                                        <div class="secondbox">
+                                            <div class="inputbox" id="account-box">
+                                                <div class="u-logo">
+                                                    <div class="u-logo-img1" id="ren"></div>
+                                                </div>
+                                                <input class="onepho" data-placeholder="手机号" name="pho" type="text" tabindex="1" placeholder="手机号">
+                                            </div>
+                                            <div class="inputbox account-box2" id="account-box" style="margin-bottom:16px;">
+                                                <div class="u-logo">
+                                                    <div class="u-logo-img1" id="suo"></div>
+                                                </div>
+                                                <input class="onepsd" data-placeholder="6-16位密码，区分大小写" name="psd" type="password" tabindex="1" placeholder="密码">
+                                            </div>
+                                            <div class="f-cb loginbox clearfix" id="denlu" style="margin-top: 15px;
+                                            margin-bottom: 12px;">
+                                                <a href="javascript:void(0);" id="dodenglu" data-action="dodenglu" tabindex="8">登录</a>
+                                            </div>
+                                            <div id="other" class="clearfix"><span class="otherlog">快速注册</span>
+                                            </div>
+                                            <div id="findpsd" class="clearfix"><span class="findpsd">找回密码</span>
+                                            </div>
+                                        </div>
+
+                                        <script src="./script/js/360_login.js"></script>
+                                        <script>
+                                            function overlay() {
+                                                var e1 = document.getElementById('modal-overlay');
+                                                e1.style.visibility = (e1.style.visibility == "visible") ? "hidden" : "visible";
+                                            }
+                                        </script>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 登录框 -->
+                    <!-- 这就是个注释 -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 注册框 -->
+    <div id="modal-overlay1" style="visibility: hidden;">
+        <div class="huibg"></div>
+        <div class="modal-data">
+            <div class="doclose clearfix"><a onclick="overlay()" href="">x</a></div>
+            <div class="popup-cont">
+                <div class="m-header f-cb m-header2" id="auto-id-1553908843328">
+                    <div class="u-closebtn u-closebtn1" data-action="doclose"></div>
+                    <div class="j-headimg clearfix">
+                        <div data-action="goEmailLogin" class="u-head1 active j-head" id="pho-reg"></div>
+                    </div>
+                    <form id="zct" action="../php/360_reg.php" method="POST">
+                        <div class="thirdbox">
+                            <div class="u-input firstelem">
+                                <label class="u-label" for="inpt-phone"></label>
+                                <input type="text" class="i-inpt " maxlength="11" placeholder="11位手机号" id="inpt-phone" name="phone">
+                                <span class="pan phone-pan"><i class="gongxi phone-gongxi"></i><i class="wenti phone-wenti"></i></span>
+                            </div>
+                            <div class="u-input firstelem yanzheng">
+                                <label class="u-label yanzhengma" for="inpt-vcode"></label>
+                                <div class="yidun_tips"><input type="text" class="yanzhenma" placeholder="输入验证码"></div>
+                            </div>
+                            <div class="u-input firstelem">
+                                <label class="u-label" for="inpt-pw"></label>
+                                <input type="password" class="i-inpt " placeholder="6-16位密码，区分大小写" id="inpt-pw" name="pwd">
+                                <span class="pan ps-pan"><i class="gongxi ps-gongxi"></i><i class="wenti ps-wenti"></i></span>
+                            </div>
+                            <div class="u-input">
+                                <label class="u-label" for="inpt-sms"></label>
+                                <input type="text" class="i-inpt smsize " maxlength="6" placeholder="输入短信验证码" id="inpt-sms" name="sms">
+                                <div class="u-tip f-dn">
+                                    <div class="spritebg u-clear" id="auto-id-1553859740908"></div>
+                                </div>
+                                <span class="b-btn btn-getsms" id="getps">获取验证码</span>
+                            </div>
+                            <div class="u-input" style="height: 58px;">
+                                <input type="checkbox" id="ckagree" checked disabled>
+                            </div>
+                            <div class="u-input" style="height: 58px;">
+                                <label class="u-label">&nbsp;</label>
+                                <div class="b-btn btn-reg btn-red" id="reg-btn">注册</div>
+                            </div>
+                        </div>
+
+                        <script src="./script/js/360_login.js"></script>
+                        <script>
+                            function overlay2() {
+                                var e2 = document.getElementById('modal-overlay1');
+                                e2.style.visibility = (e2.style.visibility == "visible") ? "hidden" : "visible";
+                            }
+                        </script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 注册框 -->
+    <div class="top-container container clearfix">
+        <!--logo start-->
+        <div class="header-logo">
+            <a class="sellogo" href="/" data-monitor="public_title_logo"><img src="http://p0.qhimg.com/t01a0b5c57143ad315a.png"></a>
+        </div>
+        <!--logo end-->
+        <div class="header-tools clearfix">
+            <!--搜索框 start-->
+            <div class="suggest-box clearfix">
+                <form id="__mall_search_form__" action="/search/" method="get">
+                    <input type="text" id="__mall_search_kw__" class="suggest" name="q" style="display:inline-block" autocomplete="off" placeholder="360智能门铃">
+                    <input type="submit" value="" class="search-btn" id="__mall_search_btn__">
+                    <div class="search-tags" style="display:none;">
+                        <a href="#" target="_blank">1080p看家</a>
+                        <a href="#" target="_blank">360N4</a>
+                    </div>
+                </form>
+                <p class="searchkey">
+                    <a href="#" target="_blank" data-monitor="public_search_key0" data-monitor-resource="">安全路由</a>
+                    <a href="#" target="_blank" data-monitor="public_search_key1" data-monitor-resource="">儿童手表SE3 Plus</a>
+                    <a href="#" target="_blank" data-monitor="public_search_key2" data-monitor-resource="">智能摄像机云台版</a>
+                    <a href="#" target="_blank" data-monitor="public_search_key3" data-monitor-resource="">行车记录仪G600</a>
+                    <a href="#" target="_blank" data-monitor="public_search_key4" data-monitor-resource="">电话手表X1 Pro</a>
+                </p>
+            </div>
+            <!--搜索框 end-->
+            <!--购物车 start-->
+            <div class="topshopcart">
+                <a href="http://10.31.164.47/my360/src/cart.html" target="_blank" class="header-cart" data-monitor="public_cart_shopcart">我的购物车<span class="cart-size">(0)</span></a>
+                <div class="header-cart-popup pop-show-tip" style="display: none;">
+                    <div class="cart-tips">请 <a class="tip-login" href="#" onclick="return false;" data-monitor="home_title_shopcartlogin">登录</a> 后查看您的购物车。</div>
+                    <div class="cart-info">
+                    </div>
+                </div>
+            </div>
+            <!--购物车 end-->
+        </div>
+    </div>
+    <!-- 导航 -->
+    <div class="top2-container container">
+        <div class="navbox">
+            <div class="sublistbox" style="opacity: 0; height: 0px; display: none;"></div>
+            <ul class="navbar column-list clearfix">
+                <li class="top-item ntopfirst">
+                    <a data-monitor="public_channel_allgoods" data-monitor-resource="" href="/search/?sort=weight" target="_blank">全部智能酷品</a>
+                </li>
+                <li class="top-item " data-type="1">
+                    <a href="/search/?q=*&amp;cate=571e3464f28d01269cc42a2c" data-monitor="public_channel_goods1" data-monitor-resource="" target="_blank">安全路由</a>
+                </li>
+                <li class="top-item " data-type="2">
+                    <a href="/search/?q=*&amp;cate=571e3464f28d01269cc42a4f" data-monitor="public_channel_goods2" data-monitor-resource="" target="_blank">儿童手表</a>
+                </li>
+                <li class="top-item nli3 " data-type="3">
+                    <a href="/search/?q=*&amp;cate=572b288c4ae38d3b230c7df3" data-monitor="public_channel_goods3" data-monitor-resource="" target="_blank">家庭安防</a>
+                </li>
+                <li class="top-item " data-type="4">
+                    <a href="/search/?q=*&amp;cate=571e3465f28d01269cc42a66" data-monitor="public_channel_goods4" data-monitor-resource="" target="_blank">行车记录仪</a>
+                </li>
+                <li class="top-item " data-type="5">
+                    <a href="/search/?q=*&amp;cate=572b288c4ae38d3b230c7ddb" data-monitor="public_channel_goods5" data-monitor-resource="" target="_blank">生活电器</a>
+                </li>
+                <li class="top-item " data-type="6">
+                    <a href="/search/?q=配件" data-monitor="public_channel_goods6" data-monitor-resource="" target="_blank">配件</a>
+                </li>
+                <li class="top-item " data-type="7">
+                    <a href="https://bbs.360.cn" data-monitor="public_channel_goods7" data-monitor-resource="" target="_blank">社区</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 导航 -->
+    <div class="yitiaoxian"></div>
+    <!-- 商品图片、价格、属性和活动等开始 -->
+    <div class="container detail-header clearfix">
+        <div class="detail-pic clearfix zhan0">
+        </div>
+        <div class="detail-thum clearfix" id="product_pix">
+            <ul>
+                <li class="zhan1"></li>
+                <li class="zhan2"></li>
+                <li class="zhan3"></li>
+                <li class="zhan4"></li>
+            </ul>
+        </div>
+        <div class="detail-summary clearfix">
+            <h2 class="probt">你是猪</h2>
+            <p class="desc"></p>
+            <div class="price l_Clearfix" id="price_tb">
+                <strong class="c_Highlight proprc">32</strong>
+            </div>
+            <div id="on_sale">
+                <ul class="discount c_Highlight">
+                    <li></li>
+                </ul>
+                <ul class="sold"></ul>
+                </ul>
+                <div id="prop_section">
+                    <div class="filter Clearfix" id="prop_1">
+                        <h3>分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类</h3>
+                        <ul class="clearfix">
+                            <li class="on"><span class="size">奇异果款</span><i class="icon icon_selected"></i></li>
+                            <li><span class="size1">蓝莓款</span><i class="icon icon_selected"></i></li>
+
+                        </ul>
+                    </div>
+                    <form action="numtacart.php" method="GET">
+                        <div class="number clearfix">
+                            <h3>数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</h3>
+                            <div id="buy_amount" class="clearfix"><span><i class="reduce">-</i></span><input type="text" value="1" class="numtocart"><span><i class="plus">+</i></span> <small id="store_amount"></small></div>
+                        </div>
+                    </form>
+                    <script src="./script/js/numtocart.js"></script>
+                    <div class="btns l_Clearfix" id="addcart">
+                        <a href="javascript:;" class="i_Btn i_Btn_big" id="buy">加入购物车</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 商品图片、价格、属性和活动等结束 -->
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./script/js/details_show.js"></script>
+</body>
+
+</html>
