@@ -1,9 +1,17 @@
-@charset "utf-8";
-$main_width:1240px!important;
-.container {
-    width: $main_width;
-    padding: 0;
-    max-width: none;
+@charset {
+    "utf-8";
+    {
+        $main_width {
+            &:1240px!important;
+            {
+                .container {
+                    width: $main_width;
+                    padding: 0;
+                    max-width: none;
+                }
+            }
+        }
+    }
 }
 
 body,
@@ -22,7 +30,7 @@ ol,
 p,
 ul {
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 body {
@@ -40,16 +48,16 @@ h5,
 h6 {
     font-size: 12px;
     font-weight: 400;
-    line-height: 1em
+    line-height: 1em;
 }
 
 i {
-    font-style: normal
+    font-style: normal;
 }
 
 ol,
 ul {
-    list-style: none
+    list-style: none;
 }
 
 button,
@@ -60,30 +68,30 @@ textarea {
     margin: 0;
     padding: 2px;
     vertical-align: middle;
-    line-height: 1em
+    line-height: 1em;
 }
 
 label {
-    cursor: pointer
+    cursor: pointer;
 }
 
 input[type=checkbox],
 input[type=radio] {
-    margin: 0 3px
+    margin: 0 3px;
 }
 
 img {
     border: none;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 table {
-    border-collapse: collapse
+    border-collapse: collapse;
 }
 
 td,
 th {
-    text-align: center
+    text-align: center;
 }
 
 li {

@@ -1,14 +1,13 @@
 $(function() {
     var ppshop = cookie.get('phone') + 'shop';
-    if (cookie.get(shop)) {
+    if (cookie.get('shop')) {
         $('#shopCartEmpty').css('display', 'none');
         $('#shopCartFull').css('display', 'block');
     } else {
         $('#shopCartEmpty').css('display', 'block');
         $('#shopCartFull').css('display', 'none');
     }
-    var product = cookie.get(shop)
-    console.log(product)
+    var product = cookie.get('shop')
     product = JSON.parse(product)
     product.forEach(function(elm, i) {
         var list = `
