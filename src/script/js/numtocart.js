@@ -19,8 +19,7 @@ $(function() {
         var src = $('.keng').attr('src');
         var heji = num * price;
         var id = location.search.split('=')[1];
-        var ppshop = cookie.get('email').split('@')[0] + 'shop';
-        console.log(ppshop)
+        var ppshop = cookie.get('phone') + 'shop';
         if (cookie.get(ppshop)) {
             var str = cookie.get(ppshop);
             var arr = JSON.parse(str);

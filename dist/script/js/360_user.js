@@ -1,0 +1,1 @@
+"use strict";$(function(){(ft=!0)?$("#reg-btn").on("click",function(){$("form").submit()}):$("#reg-btn").off("click")});

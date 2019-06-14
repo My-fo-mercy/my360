@@ -17,7 +17,6 @@
             this.pic_ul.append($first);
             this.pic_ul.prepend($last);
             this.liwidth = $('.pic_list li').eq(0).width();
-            console.log(this.liwidth)
             this.pic_ul.width($('.pic_list li').length * this.liwidth).css('left', -this.liwidth + 'px');
             this.btns.on('click', function() {
                 _this.num = $(this).index();

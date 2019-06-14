@@ -208,7 +208,7 @@
             <!--搜索框 end-->
             <!--购物车 start-->
             <div class="topshopcart">
-                <a href="http://10.31.164.47/my360/src/cart.html" target="_blank" class="header-cart" data-monitor="public_cart_shopcart">我的购物车<span class="cart-size">(0)</span></a>
+                <a href="http://10.31.164.47/my360/src/cart.html" target="_blank" class="header-cart" data-monitor="public_cart_shopcart">我的购物车<span class="cart-size" id="cart_num">(0)</span></a>
                 <div class="header-cart-popup pop-show-tip" style="display: none;">
                     <div class="cart-tips">请 <a class="tip-login" href="#" onclick="return false;" data-monitor="home_title_shopcartlogin">登录</a> 后查看您的购物车。</div>
                     <div class="cart-info">
@@ -254,14 +254,20 @@
     <div class="yitiaoxian"></div>
     <!-- 商品图片、价格、属性和活动等开始 -->
     <div class="container detail-header clearfix">
-        <div class="detail-pic clearfix zhan0">
+        <div class="wrap">
+            <div id="dingwei">
+                <div class="detail-pic clearfix zhan0 gobig">
+                </div>
+                <div id="sf"></div>
+            </div>
+            <div id="bigdatu" style="display: none"><img src="https://p.ssl.qhmsg.com/t01d3749d75cd27e371.png" alt=""></div>
         </div>
         <div class="detail-thum clearfix" id="product_pix">
             <ul>
-                <li class="zhan1"></li>
-                <li class="zhan2"></li>
-                <li class="zhan3"></li>
-                <li class="zhan4"></li>
+                <li class="zhan1 ndf"></li>
+                <li class="zhan2 ndf"></li>
+                <li class="zhan3 ndf"></li>
+                <li class="zhan4 ndf"></li>
             </ul>
         </div>
         <div class="detail-summary clearfix">
@@ -305,6 +311,8 @@
     <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./script/js/details_show.js"></script>
+    <script src="./script/js/360_all_cartnum.js"></script>
+    <script src="./script/js/bigger.js"></script>
 </body>
 
 </html>

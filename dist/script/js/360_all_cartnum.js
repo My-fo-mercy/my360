@@ -1,0 +1,1 @@
+"use strict";$(function(){var e=cookie.get("phone")+"shop",n=cookie.get(e),t=(n=JSON.parse(n),new Array);$.each(n,function(e,n){t.push(n.num)});var c=0;$.each(t,function(e,n){n=parseInt(n),c+=n}),$("#cart_num").html(c)});

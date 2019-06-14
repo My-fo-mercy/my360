@@ -3,7 +3,7 @@ $(function() {
         click: function() {
             $.ajax({
                 type: "POST",
-                url: "../php/360_login.php",
+                url: "http://10.31.164.47/my360/php/360_login.php",
                 data: { 'phone': $('.onepho').val(), 'psd': $('.onepsd').val() },
                 success: function(result) {
                     console.log(result)

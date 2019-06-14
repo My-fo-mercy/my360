@@ -46,7 +46,6 @@
                 </li>
                 <li class="topbox-item rightitem topNavMyOrder" style="margin-right: -10px; display: none;"><a href="/user/myorder" target="_blank">我的订单</a></li>
                 <li class="topbox-item rightitem navloginbox">
-
                     <!-- 这就是个注释 -->
                     <div class="welcome loginbefore nloginWrap">
                         <span class="yidenglu" style="display: none;"><span id="lopho"></span><a href="#" id="loginout">退出</a></span>
@@ -208,7 +207,7 @@
             <!--搜索框 end-->
             <!--购物车 start-->
             <div class="topshopcart">
-                <a href="http://10.31.164.47/my360/src/cart.html" target="_blank" class="header-cart" data-monitor="public_cart_shopcart">我的购物车<span class="cart-size">(0)</span></a>
+                <a href="http://10.31.164.47/my360/src/cart.html" target="_blank" class="header-cart" data-monitor="public_cart_shopcart">我的购物车<span class="cart-size" id="cart_num">(0)</span></a>
                 <div class="header-cart-popup pop-show-tip" style="display: none;">
                     <div class="cart-tips">请 <a class="tip-login" href="#" onclick="return false;" data-monitor="home_title_shopcartlogin">登录</a> 后查看您的购物车。</div>
                     <div class="cart-info">
@@ -405,6 +404,7 @@
     <!-- 底部 -->
     <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./script/js/360_all_cartnum.js"></script>
 </body>
 
 </html>
