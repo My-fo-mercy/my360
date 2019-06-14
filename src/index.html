@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="./sass/index.min.css">
     <script src="./script/thirdplugins/jquery.js"></script>
     <script src="./script/js/360_reg_c.js"></script>
-    <script src="./script/js/cookie.js"></script>
+    <!-- <script src="./script/js/cookie.js"></script> -->
+    <script src="./script/thirdplugins/jquery.cookie.js"></script>
     <!--[if lt IE 9]>
         <script src="https: //cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https: //cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -56,15 +57,17 @@
                         $(function() {
                             $('#loginout').on('click', function() {
                                 $('.yidenglu').css('display', 'none');
-                                cookie.remove('phone');
+                                $.cookie('phone', $.cookie('phone'), {
+                                    expires: -1
+                                })
                                 location.reload();
                                 $('.do_login').css('display', 'block');
                                 return false;
                             })
-                            if (cookie.get('phone')) {
+                            if ($.cookie('phone')) {
                                 $('.weidenglu').css('display', 'none');
                                 $('.yidenglu').css('display', 'block');
-                                $('#lopho').html(cookie.get('phone'));
+                                $('#lopho').html($.cookie('phone'));
                             }
                         })
                     </script>

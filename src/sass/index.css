@@ -186,6 +186,7 @@
 
 .bz {
   position: relative;
+  top: -20px;
 }
 
 .bz .side-category {
@@ -617,6 +618,7 @@ nav .user-entry:hover .head {
   line-height: 42px;
   font-size: 18px !important;
   border: none;
+  cursor: pointer;
 }
 
 .forget,

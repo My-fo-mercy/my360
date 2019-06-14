@@ -1,13 +1,13 @@
 $(function() {
-    var ppshop = cookie.get('phone') + 'shop';
-    if (cookie.get(ppshop)) {
+    var ppshop = $.cookie('phone') + 'shop';
+    if ($.cookie(ppshop)) {
         $('#shopCartEmpty').css('display', 'none');
         $('#shopCartFull').css('display', 'block');
     } else {
         $('#shopCartEmpty').css('display', 'block');
         $('#shopCartFull').css('display', 'none');
     }
-    var product = cookie.get(ppshop)
+    var product = $.cookie(ppshop)
     product = JSON.parse(product)
     product.forEach(function(elm, i) {
         var list = `

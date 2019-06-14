@@ -1,12 +1,12 @@
 $(function() {
-    var ppshop = cookie.get('phone') + 'shop';
-    var all = cookie.get(ppshop)
-    var all = JSON.parse(all)
-    var newArr = new Array;
+    let ppshop = $.cookie('phone') + 'shop';
+    let all = $.cookie(ppshop)
+    all = JSON.parse(all)
+    let newArr = new Array;
     $.each(all, function(i, val) {
         newArr.push(val.num)
     })
-    var allnum = 0;
+    let allnum = 0;
     $.each(newArr, function(i, val) {
         val = parseInt(val)
         allnum = allnum + val

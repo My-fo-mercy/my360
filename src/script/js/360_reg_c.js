@@ -38,11 +38,10 @@ $(function() {
             ft2 = false;
         }
     })
-    $(function() {
-        $("#reg-btn").on("click", function() {
-            if (ft1 && ft2) {
-                $("#zct").submit();
-            }
-        });
+    $("#reg-btn").on("click", function() {
+        console.log(1)
+        if (ft1 && ft2) {
+            $("#zct").submit();
+        }
     });
 })

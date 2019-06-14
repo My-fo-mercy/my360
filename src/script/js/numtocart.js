@@ -19,9 +19,9 @@ $(function() {
         var src = $('.keng').attr('src');
         var heji = num * price;
         var id = location.search.split('=')[1];
-        var ppshop = cookie.get('phone') + 'shop';
-        if (cookie.get(ppshop)) {
-            var str = cookie.get(ppshop);
+        var ppshop = $.cookie('phone') + 'shop';
+        if ($.cookie(ppshop)) {
+            var str = $.cookie(ppshop);
             var arr = JSON.parse(str);
             var newArr;
             if (arr.filter((elm, i) => { return elm.id == id }).length > 0) {
@@ -34,15 +34,18 @@ $(function() {
                     }
                     return elm;
                 });
-                cookie.set(ppshop, JSON.stringify(newArr), 1);
+                $.cookie(ppshop, JSON.stringify(newArr), { expires: 1 })
+                    // cookie.set(ppshop, JSON.stringify(newArr), 1);
             } else {
                 arr.push({ "id": id, "num": num, "price": price, 'title': title, 'size': size, 'src': src, 'heji': heji });
-                cookie.set(ppshop, JSON.stringify(arr), 1);
+                // cookie.set(ppshop, JSON.stringify(arr), 1);
+                $.cookie(ppshop, JSON.stringify(arr), { expires: 1 })
             }
         } else {
             var arr = [{ "id": id, "num": num, "price": price, 'title': title, 'size': size, 'src': src, 'heji': heji }];
             var str = JSON.stringify(arr);
-            cookie.set(ppshop, str, 1);
+            // cookie.set(ppshop, str, 1);
+            $.cookie(ppshop, str, { expires: 1 })
         }
         location.reload();
     })
