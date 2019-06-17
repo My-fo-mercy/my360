@@ -1,1 +1,1 @@
-"use strict";$(function(){var e=cookie.get("phone")+"shop",n=cookie.get(e),t=(n=JSON.parse(n),new Array);$.each(n,function(e,n){t.push(n.num)});var c=0;$.each(t,function(e,n){n=parseInt(n),c+=n}),$("#cart_num").html(c)});
+"use strict";$(function(){var n=$.cookie("phone")+"shop",a=$.cookie(n);a=JSON.parse(a);var c=new Array;$.each(a,function(n,a){c.push(a.num)});var e=0;$.each(c,function(n,a){a=parseInt(a),e+=a}),$("#cart_num").html(e)});

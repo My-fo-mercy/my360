@@ -1,5 +1,5 @@
 $(function() {
-    var ppshop = $.cookie('phone') + 'shop';
+    let ppshop = $.cookie('phone') + 'shop';
     if ($.cookie(ppshop)) {
         $('#shopCartEmpty').css('display', 'none');
         $('#shopCartFull').css('display', 'block');
@@ -7,10 +7,10 @@ $(function() {
         $('#shopCartEmpty').css('display', 'block');
         $('#shopCartFull').css('display', 'none');
     }
-    var product = $.cookie(ppshop)
+    let product = $.cookie(ppshop)
     product = JSON.parse(product)
     product.forEach(function(elm, i) {
-        var list = `
+        let list = `
         <div class="clt clearfix cll lia${elm.id}">
                         <div class="cl1 icony"><span class="icon iconno icon2 icon3 ylj"></span><span></span></div>
                         <div class="cl2 clearfix"><span><img src="${elm.src}" class="cspt"><i class="cspp">${elm.title}</i><i class="csps">${elm.size}</i></span></div>

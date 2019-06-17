@@ -32,16 +32,16 @@ gulp.task('htmlfile', function() {
 gulp.task('cssfile', function() {
     return gulp.src('src/sass/*.css') //引入文件
         .pipe(css()) //压缩
-        .pipe(gulp.dest('dist/css/')); //输出
+        .pipe(gulp.dest('dist/sass/')); //输出
 });
 
 
-//4.编译sass
-// gulp.task('sassfile', function() {
-//     return gulp.src('src/sass/*.scss')
-//         .pipe(sass({ outputStyle: 'compressed' }))
-//         .pipe(gulp.dest('dist/css/'));
-// });
+// 4.编译sass
+gulp.task('sassfile', function() {
+    return gulp.src('src/sass/*.scss')
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(gulp.dest('dist/sass/'));
+});
 
 
 //5.压缩js
@@ -68,11 +68,11 @@ gulp.task('jsfile', function() {
 
 //7.图片的压缩--png
 //如果插件安装不成功，可以在清除缓存之后继续按照 npm cache clean --force
-// gulp.task('runimg', function() {
-//     return gulp.src('img/*.png')
-//         .pipe(imagemin())
-//         .pipe(gulp.dest('dist/img/'));
-// });
+gulp.task('runimg', function() {
+    return gulp.src('img/*.png')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img/'));
+});
 
 
 //监听所有文件的变化--任务必须先跑一次。
