@@ -6,7 +6,7 @@
     "dependencies": {
         "abbrev": "^1.1.1",
         "amdefine": "^1.0.1",
-        "ajv": "^6.10.0",
+        "ajv": "^6.12.3",
         "ansi-colors": "^1.1.0",
         "ansi-gray": "^0.1.1",
         "ansi-regex": "^2.1.1",
